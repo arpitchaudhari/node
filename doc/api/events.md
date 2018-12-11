@@ -149,7 +149,7 @@ As a best practice, listeners should always be added for the `'error'` events.
 ```js
 const myEmitter = new MyEmitter();
 myEmitter.on('error', (err) => {
-  console.error('whoops! there was an error');
+  console.error('%s there was an error',err);
 });
 myEmitter.emit('error', new Error('whoops!'));
 // Prints: whoops! there was an error
